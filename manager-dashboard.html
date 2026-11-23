@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaviyaa Group — Branch Manager Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#EEF4FC] text-[#0F172A] min-h-screen flex flex-col lg:flex-row"
+  >
+    <!-- Left Sidebar -->
+    <aside
+      class="w-full lg:w-64 bg-gradient-to-b from-[#0A3570] via-[#0F4C9C] to-[#155BB5] text-white p-6 flex flex-col justify-between shrink-0"
+    >
+      <div>
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-3 pb-6 border-b border-white/15">
+          <svg viewBox="0 0 96 96" class="w-11 h-11 shrink-0">
+            <circle cx="48" cy="48" r="42" fill="#FFFFFF" fill-opacity="0.15" />
+            <circle cx="48" cy="48" r="32" fill="#FFFFFF" />
+            <path
+              d="M35 33V63M35 48L51 33M42 42L53 63"
+              stroke="#0F4C9C"
+              stroke-width="5.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <path
+              d="M14 58C26 70 62 66 80 34"
+              stroke="#60A5FA"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              fill="none"
+            />
+          </svg>
+          <div>
+            <h1 class="text-lg font-extrabold tracking-tight leading-none">
+              Kaviyaa Group
+            </h1>
+            <p class="text-[10px] uppercase tracking-widest text-blue-200 mt-1">
+              Manager Portal
+            </p>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="mt-6 space-y-1.5 text-xs font-semibold">
+          <a
+            href="#performance"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white text-[#0F4C9C] font-extrabold shadow-sm"
+          >
+            <span>📊</span>
+            <span>Team Performance</span>
+          </a>
+          <a
+            href="#clients"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-blue-100 hover:bg-white/10 transition"
+          >
+            <span>👥</span>
+            <span>Client Details</span>
+          </a>
+          <a
+            href="#approvals"
+            class="flex items-center justify-between px-4 py-3 rounded-2xl text-blue-100 hover:bg-white/10 transition"
+          >
+            <div class="flex items-center gap-3">
+              <span>🔔</span>
+              <span>Approval Notification</span>
+            </div>
+            <span
+              id="badge-count"
+              class="bg-amber-400 text-[#0F172A] text-[10px] font-extrabold px-2 py-0.5 rounded-full"
+              >3</span
+            >
+          </a>
+          <a
+            href="#attendance"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-blue-100 hover:bg-white/10 transition"
+          >
+            <span>🕒</span>
+            <span>Attendance</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Manager Profile & Logout -->
+      <div class="mt-8 pt-5 border-t border-white/15">
+        <div class="flex items-center gap-3 mb-4">
+          <div
+            class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-extrabold text-sm"
+          >
+            BM
+          </div>
+          <div>
+            <p class="text-xs font-bold">Branch Manager</p>
+            <p class="text-[10px] text-blue-200">ID: KGM-101 • Chennai HQ</p>
+          </div>
+        </div>
+        <a
+          href="staff-login.html"
+          class="block w-full text-center py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold transition"
+        >
+          ← Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Area -->
+    <main class="flex-1 p-5 sm:p-8 space-y-7 overflow-y-auto">
+      <!-- Top Header -->
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-5 rounded-3xl shadow-sm border border-[#E2E8F0]"
+      >
+        <div>
+          <span
+            class="text-[11px] font-bold uppercase tracking-wider text-[#0F4C9C]"
+            >Overview • November 2026</span
+          >
+          <h2 class="text-2xl font-extrabold text-[#0F172A] mt-0.5">
+            Branch Manager Dashboard
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span
+            class="text-xs font-semibold bg-[#EFF6FF] text-[#0F4C9C] px-3.5 py-2 rounded-full border border-[#DBEAFE]"
+          >
+            ● Live Operations Active
+          </span>
+        </div>
+      </div>
+
+      <!-- 1. TEAM PERFORMANCE -->
+      <section id="performance" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-extrabold text-[#0F172A]">
+            1. Team Performance
+          </h3>
+          <span class="text-xs font-semibold text-[#64748B]"
+            >Monthly Sales Target: ₹25,00,000</span
+          >
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div
+            class="bg-white p-5 rounded-3xl border border-[#E2E8F0] shadow-sm"
+          >
+            <p class="text-xs font-semibold text-[#64748B]">Total Revenue</p>
+            <p class="text-2xl font-extrabold text-[#0F4C9C] mt-1">
+              ₹18,45,000
+            </p>
+            <p class="text-[11px] font-bold text-emerald-600 mt-1">
+              ↑ 74% Target Achieved
+            </p>
+          </div>
+          <div
+            class="bg-white p-5 rounded-3xl border border-[#E2E8F0] shadow-sm"
+          >
+            <p class="text-xs font-semibold text-[#64748B]">
+              Confirmed Bookings
+            </p>
+            <p class="text-2xl font-extrabold text-[#0F172A] mt-1">64 Trips</p>
+            <p class="text-[11px] font-bold text-emerald-600 mt-1">
+              ↑ +12 this week
+            </p>
+          </div>
+          <div
+            class="bg-white p-5 rounded-3xl border border-[#E2E8F0] shadow-sm"
+          >
+            <p class="text-xs font-semibold text-[#64748B]">Active Leads</p>
+            <p class="text-2xl font-extrabold text-[#0F172A] mt-1">118 Leads</p>
+            <p class="text-[11px] font-bold text-[#0F4C9C] mt-1">
+              32 Hot Follow-ups
+            </p>
+          </div>
+          <div
+            class="bg-white p-5 rounded-3xl border border-[#E2E8F0] shadow-sm"
+          >
+            <p class="text-xs font-semibold text-[#64748B]">Top Executive</p>
+            <p class="text-2xl font-extrabold text-[#0F172A] mt-1">
+              Karthik R.
+            </p>
+            <p class="text-[11px] font-bold text-emerald-600 mt-1">
+              22 Bookings Closed
+            </p>
+          </div>
+        </div>
+
+        <!-- Executive Progress Bars -->
+        <div
+          class="bg-white p-6 rounded-3xl border border-[#E2E8F0] shadow-sm space-y-4"
+        >
+          <h4
+            class="text-xs font-extrabold uppercase tracking-wider text-[#475569]"
+          >
+            Sales Executive Leaderboard
+          </h4>
+          <div class="space-y-3 text-xs">
+            <div>
+              <div class="flex justify-between font-bold mb-1">
+                <span>Karthik R. (KGS-201)</span>
+                <span class="text-[#0F4C9C]">₹6,80,000 / ₹7,50,000 (91%)</span>
+              </div>
+              <div
+                class="w-full h-2.5 bg-[#EFF6FF] rounded-full overflow-hidden"
+              >
+                <div
+                  class="bg-[#0F4C9C] h-full rounded-full"
+                  style="width: 91%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold mb-1">
+                <span>Divya S. (KGS-202)</span>
+                <span class="text-[#0F4C9C]">₹5,40,000 / ₹7,00,000 (77%)</span>
+              </div>
+              <div
+                class="w-full h-2.5 bg-[#EFF6FF] rounded-full overflow-hidden"
+              >
+                <div
+                  class="bg-[#1D6CE0] h-full rounded-full"
+                  style="width: 77%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold mb-1">
+                <span>Aravind M. (KGS-204)</span>
+                <span class="text-[#0F4C9C]">₹4,15,000 / ₹6,50,000 (64%)</span>
+              </div>
+              <div
+                class="w-full h-2.5 bg-[#EFF6FF] rounded-full overflow-hidden"
+              >
+                <div
+                  class="bg-[#3B82F6] h-full rounded-full"
+                  style="width: 64%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. APPROVAL NOTIFICATION & 3. ATTENDANCE -->
+      <div class="grid lg:grid-cols-12 gap-6">
+        <!-- APPROVAL NOTIFICATION -->
+        <section
+          id="approvals"
+          class="lg:col-span-7 bg-white p-6 rounded-3xl border border-[#E2E8F0] shadow-sm space-y-4"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-extrabold text-[#0F172A]">
+              2. Approval Notifications
+            </h3>
+            <span
+              class="text-[11px] font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full"
+              >Action Required</span
+            >
+          </div>
+
+          <div id="approval-list" class="space-y-3 text-xs">
+            <div
+              class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            >
+              <div>
+                <span
+                  class="text-[10px] font-extrabold uppercase text-[#0F4C9C] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full"
+                  >Discount Approval</span
+                >
+                <p class="font-bold text-sm text-[#0F172A] mt-1.5">
+                  Kerala Honeymoon Package — 10% Extra Discount
+                </p>
+                <p class="text-[#64748B] mt-0.5">
+                  Requested by Karthik R. • Client: Suresh Kumar (₹48,000 →
+                  ₹43,200)
+                </p>
+              </div>
+              <div class="flex gap-2 shrink-0">
+                <button
+                  onclick="handleApproval(this, 'Approved')"
+                  class="px-3.5 py-2 rounded-xl bg-[#0F4C9C] hover:bg-[#0B3B7A] text-white font-bold transition"
+                >
+                  Approve
+                </button>
+                <button
+                  onclick="handleApproval(this, 'Rejected')"
+                  class="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold transition"
+                >
+                  Reject
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            >
+              <div>
+                <span
+                  class="text-[10px] font-extrabold uppercase text-[#0F4C9C] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full"
+                  >Fleet Dispatch</span
+                >
+                <p class="font-bold text-sm text-[#0F172A] mt-1.5">
+                  26-Seater Tempo Traveller — Kodaikanal Group
+                </p>
+                <p class="text-[#64748B] mt-0.5">
+                  Requested by Divya S. • Travel Date: 26 Nov 2026
+                </p>
+              </div>
+              <div class="flex gap-2 shrink-0">
+                <button
+                  onclick="handleApproval(this, 'Approved')"
+                  class="px-3.5 py-2 rounded-xl bg-[#0F4C9C] hover:bg-[#0B3B7A] text-white font-bold transition"
+                >
+                  Approve
+                </button>
+                <button
+                  onclick="handleApproval(this, 'Rejected')"
+                  class="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold transition"
+                >
+                  Reject
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            >
+              <div>
+                <span
+                  class="text-[10px] font-extrabold uppercase text-[#0F4C9C] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full"
+                  >Leave Request</span
+                >
+                <p class="font-bold text-sm text-[#0F172A] mt-1.5">
+                  1 Day Casual Leave — Aravind M. (KGS-204)
+                </p>
+                <p class="text-[#64748B] mt-0.5">
+                  Date: 25 Nov 2026 • Reason: Family Function
+                </p>
+              </div>
+              <div class="flex gap-2 shrink-0">
+                <button
+                  onclick="handleApproval(this, 'Approved')"
+                  class="px-3.5 py-2 rounded-xl bg-[#0F4C9C] hover:bg-[#0B3B7A] text-white font-bold transition"
+                >
+                  Approve
+                </button>
+                <button
+                  onclick="handleApproval(this, 'Rejected')"
+                  class="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold transition"
+                >
+                  Reject
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATTENDANCE -->
+        <section
+          id="attendance"
+          class="lg:col-span-5 bg-white p-6 rounded-3xl border border-[#E2E8F0] shadow-sm space-y-4"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-extrabold text-[#0F172A]">
+              3. Staff Attendance
+            </h3>
+            <span class="text-xs font-bold text-emerald-600"
+              >5 / 6 Present</span
+            >
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div
+              class="flex items-center justify-between p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
+            >
+              <div>
+                <p class="font-bold text-[#0F172A]">
+                  Karthik R.
+                  <span class="text-[#64748B] font-normal">(Sales Exec)</span>
+                </p>
+                <p class="text-[11px] text-[#64748B]">
+                  In: 09:25 AM • Chennai Office
+                </p>
+              </div>
+              <span
+                class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]"
+                >Present</span
+              >
+            </div>
+
+            <div
+              class="flex items-center justify-between p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
+            >
+              <div>
+                <p class="font-bold text-[#0F172A]">
+                  Divya S.
+                  <span class="text-[#64748B] font-normal">(Sales Exec)</span>
+                </p>
+                <p class="text-[11px] text-[#64748B]">
+                  In: 09:30 AM • Chennai Office
+                </p>
+              </div>
+              <span
+                class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]"
+                >Present</span
+              >
+            </div>
+
+            <div
+              class="flex items-center justify-between p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
+            >
+              <div>
+                <p class="font-bold text-[#0F172A]">
+                  Aravind M.
+                  <span class="text-[#64748B] font-normal">(Sales Exec)</span>
+                </p>
+                <p class="text-[11px] text-[#64748B]">
+                  In: 10:05 AM • Field Visit
+                </p>
+              </div>
+              <span
+                class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 font-bold text-[11px]"
+                >Late / Field</span
+              >
+            </div>
+
+            <div
+              class="flex items-center justify-between p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
+            >
+              <div>
+                <p class="font-bold text-[#0F172A]">
+                  Senthil K.
+                  <span class="text-[#64748B] font-normal"
+                    >(Fleet Coordinator)</span
+                  >
+                </p>
+                <p class="text-[11px] text-[#64748B]">
+                  In: 09:10 AM • Airport Desk
+                </p>
+              </div>
+              <span
+                class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]"
+                >Present</span
+              >
+            </div>
+
+            <div
+              class="flex items-center justify-between p-3 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
+            >
+              <div>
+                <p class="font-bold text-[#0F172A]">
+                  Priya N.
+                  <span class="text-[#64748B] font-normal">(Telecaller)</span>
+                </p>
+                <p class="text-[11px] text-[#64748B]">Not checked in today</p>
+              </div>
+              <span
+                class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-700 font-bold text-[11px]"
+                >Absent</span
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 4. CLIENT DETAILS TABLE -->
+      <section
+        id="clients"
+        class="bg-white p-6 rounded-3xl border border-[#E2E8F0] shadow-sm space-y-4"
+      >
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+        >
+          <h3 class="text-base font-extrabold text-[#0F172A]">
+            4. Client Details & Active Bookings
+          </h3>
+          <input
+            type="text"
+            onkeyup="filterClients(this.value)"
+            placeholder="Search client or destination..."
+            class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-[#0F4C9C] w-full sm:w-64"
+          />
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr
+                class="border-b border-[#E2E8F0] text-[#64748B] uppercase text-[11px]"
+              >
+                <th class="py-3 px-4">Client Name</th>
+                <th class="py-3 px-4">Mobile</th>
+                <th class="py-3 px-4">Package / Trip</th>
+                <th class="py-3 px-4">Assigned Exec</th>
+                <th class="py-3 px-4">Amount</th>
+                <th class="py-3 px-4">Status</th>
+              </tr>
+            </thead>
+            <tbody id="client-table-body" class="divide-y divide-[#F1F5F9]">
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="py-3.5 px-4 font-bold text-[#0F172A]">
+                  Suresh Kumar
+                </td>
+                <td class="py-3.5 px-4 text-[#475569]">+91 98401 22310</td>
+                <td class="py-3.5 px-4 font-semibold text-[#0F4C9C]">
+                  Munnar & Alleppey (4D/3N)
+                </td>
+                <td class="py-3.5 px-4">Karthik R.</td>
+                <td class="py-3.5 px-4 font-bold">₹43,200</td>
+                <td class="py-3.5 px-4">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]"
+                    >Confirmed</span
+                  >
+                </td>
+              </tr>
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="py-3.5 px-4 font-bold text-[#0F172A]">
+                  Meenakshi Sundaram
+                </td>
+                <td class="py-3.5 px-4 text-[#475569]">+91 94442 88912</td>
+                <td class="py-3.5 px-4 font-semibold text-[#0F4C9C]">
+                  Navagraha Temple Circuit
+                </td>
+                <td class="py-3.5 px-4">Divya S.</td>
+                <td class="py-3.5 px-4 font-bold">₹28,500</td>
+                <td class="py-3.5 px-4">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 font-bold text-[11px]"
+                    >Advance Paid</span
+                  >
+                </td>
+              </tr>
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="py-3.5 px-4 font-bold text-[#0F172A]">
+                  TechNova Pvt Ltd
+                </td>
+                <td class="py-3.5 px-4 text-[#475569]">+91 98845 77100</td>
+                <td class="py-3.5 px-4 font-semibold text-[#0F4C9C]">
+                  Kodaikanal Corporate Outing
+                </td>
+                <td class="py-3.5 px-4">Divya S.</td>
+                <td class="py-3.5 px-4 font-bold">₹1,35,000</td>
+                <td class="py-3.5 px-4">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-blue-100 text-[#0F4C9C] font-bold text-[11px]"
+                    >Quote Sent</span
+                  >
+                </td>
+              </tr>
+              <tr class="hover:bg-[#F8FAFC]">
+                <td class="py-3.5 px-4 font-bold text-[#0F172A]">
+                  Vigneshwaran P.
+                </td>
+                <td class="py-3.5 px-4 text-[#475569]">+91 90031 65432</td>
+                <td class="py-3.5 px-4 font-semibold text-[#0F4C9C]">
+                  Ooty & Coonoor Family Cab
+                </td>
+                <td class="py-3.5 px-4">Aravind M.</td>
+                <td class="py-3.5 px-4 font-bold">₹19,800</td>
+                <td class="py-3.5 px-4">
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]"
+                    >Confirmed</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let pendingCount = 3;
+
+      function handleApproval(btn, status) {
+        const btnGroup = btn.parentElement;
+        if (status === "Approved") {
+          btnGroup.innerHTML =
+            '<span class="px-3 py-1.5 rounded-xl bg-emerald-100 text-emerald-700 font-extrabold">✓ Approved</span>';
+        } else {
+          btnGroup.innerHTML =
+            '<span class="px-3 py-1.5 rounded-xl bg-rose-100 text-rose-700 font-extrabold">✕ Rejected</span>';
+        }
+        pendingCount = Math.max(0, pendingCount - 1);
+        document.getElementById("badge-count").textContent = pendingCount;
+      }
+
+      function filterClients(query) {
+        const q = query.toLowerCase();
+        const rows = document.querySelectorAll("#client-table-body tr");
+        rows.forEach((row) => {
+          row.style.display = row.textContent.toLowerCase().includes(q)
+            ? ""
+            : "none";
+        });
+      }
+    </script>
+  </body>
+</html>

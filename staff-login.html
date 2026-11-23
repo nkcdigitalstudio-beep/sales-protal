@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaviyaa Group — Manager & Sales Staff Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#E6EFFB] min-h-screen flex items-center justify-center p-4 md:p-8 relative overflow-x-hidden"
+  >
+    <div
+      class="fixed -top-24 -left-24 w-96 h-96 bg-[#0F4C9C]/10 rounded-full blur-3xl pointer-events-none"
+    ></div>
+    <div
+      class="fixed -bottom-24 -right-24 w-96 h-96 bg-[#1D6CE0]/15 rounded-full blur-3xl pointer-events-none"
+    ></div>
+
+    <div
+      class="relative z-10 w-full max-w-[920px] bg-white rounded-[36px] shadow-[0_24px_70px_rgba(15,76,156,0.16)] border-[6px] border-[#F0F6FF] overflow-hidden grid md:grid-cols-12"
+    >
+      <!-- Left Blue Branding Panel -->
+      <div
+        class="md:col-span-5 bg-gradient-to-br from-[#0A3570] via-[#0F4C9C] to-[#1963C6] text-white p-8 flex flex-col justify-between relative overflow-hidden"
+      >
+        <div
+          class="absolute -right-14 -bottom-14 w-60 h-60 rounded-full border border-white/10 pointer-events-none"
+        ></div>
+        <div
+          class="absolute -right-6 -bottom-6 w-40 h-40 rounded-full border border-white/15 pointer-events-none"
+        ></div>
+
+        <div>
+          <span
+            class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest bg-white/15 backdrop-blur-md px-3.5 py-1.5 rounded-full text-blue-50"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse"
+            ></span>
+            Internal Operations CRM
+          </span>
+        </div>
+
+        <div class="my-8 md:my-0">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 mb-6"
+          >
+            <p
+              class="text-[11px] uppercase tracking-wider text-blue-200 font-semibold"
+            >
+              Active Portal Modules
+            </p>
+            <ul class="mt-3 space-y-2.5 text-xs text-white/95">
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold"
+                  >✓</span
+                >
+                <span>Team & Sales Performance</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold"
+                  >✓</span
+                >
+                <span>Client Details & Booking Entry</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold"
+                  >✓</span
+                >
+                <span>Approvals, Profile & Attendance</span>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-extrabold leading-snug">
+            Kaviyaa Group Team Workspace
+          </h3>
+          <p class="text-xs text-blue-100/85 mt-2 leading-relaxed">
+            Authorized access for Branch Managers & Sales Executives to manage
+            bookings, targets, and daily operations.
+          </p>
+        </div>
+
+        <div
+          class="pt-4 border-t border-white/15 flex items-center justify-between text-[11px] text-blue-100/80"
+        >
+          <span>Secured Staff Access</span>
+          <span class="font-bold text-white">v2.6 CRM</span>
+        </div>
+      </div>
+
+      <!-- Right Staff Login Form -->
+      <div
+        class="md:col-span-7 p-7 sm:p-10 md:p-12 flex flex-col justify-center bg-white"
+      >
+        <div class="flex flex-col items-center text-center">
+          <svg viewBox="0 0 96 96" class="w-16 h-16">
+            <defs>
+              <linearGradient
+                id="kgStaffBlue"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#1D6CE0" />
+                <stop offset="100%" stop-color="#0A3977" />
+              </linearGradient>
+            </defs>
+            <circle cx="48" cy="48" r="42" fill="#EFF6FF" />
+            <circle cx="48" cy="48" r="32" fill="url(#kgStaffBlue)" />
+            <path
+              d="M35 33V63M35 48L51 33M42 42L53 63"
+              stroke="#FFFFFF"
+              stroke-width="4.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <path
+              d="M14 58C26 70 62 66 80 34"
+              stroke="#60A5FA"
+              stroke-width="3.2"
+              stroke-linecap="round"
+              fill="none"
+            />
+            <path
+              d="M83 28L71 32L75 35L73 40L78 37L83 39L83 28Z"
+              fill="#0F4C9C"
+            />
+          </svg>
+
+          <h1
+            class="text-2xl font-extrabold text-[#0F172A] tracking-tight mt-2"
+          >
+            Kaviyaa <span class="text-[#0F4C9C]">Group</span>
+          </h1>
+          <p
+            class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#3B82F6] mt-1"
+          >
+            Staff & Management Portal
+          </p>
+        </div>
+
+        <!-- Role Toggle Switch -->
+        <div
+          class="grid grid-cols-2 bg-[#F1F5F9] p-1.5 rounded-2xl border border-[#E2E8F0] mt-6"
+        >
+          <button
+            type="button"
+            id="btn-manager"
+            onclick="setStaffRole('Manager')"
+            class="py-2.5 px-3 text-xs font-extrabold rounded-xl bg-[#0F4C9C] text-white shadow-sm transition flex items-center justify-center gap-1.5"
+          >
+            <span>Branch Manager</span>
+          </button>
+          <button
+            type="button"
+            id="btn-sales"
+            onclick="setStaffRole('Sales')"
+            class="py-2.5 px-3 text-xs font-bold rounded-xl text-[#475569] hover:text-[#0F4C9C] transition flex items-center justify-center gap-1.5"
+          >
+            <span>Sales Executive</span>
+          </button>
+        </div>
+
+        <div class="text-center mt-5 mb-5">
+          <h2 id="role-heading" class="text-lg font-extrabold text-[#111827]">
+            Manager Sign In
+          </h2>
+          <p id="role-subtext" class="text-xs text-[#64748B] mt-1">
+            Access team performance, client details, approvals & attendance
+          </p>
+        </div>
+
+        <form onsubmit="handleStaffLogin(event)" class="space-y-4">
+          <div
+            class="flex items-center bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl px-4 py-3.5 focus-within:border-[#0F4C9C] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#0F4C9C]/10 transition"
+          >
+            <svg
+              class="w-5 h-5 text-[#0F4C9C] mr-3 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
+              />
+            </svg>
+            <input
+              id="emp-id-input"
+              type="text"
+              required
+              placeholder="Manager ID (e.g. KGM-101) or Work Email"
+              class="w-full bg-transparent text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none"
+            />
+          </div>
+
+          <div
+            class="flex items-center bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl px-4 py-3.5 focus-within:border-[#0F4C9C] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#0F4C9C]/10 transition"
+          >
+            <svg
+              class="w-5 h-5 text-[#0F4C9C] mr-3 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+              />
+            </svg>
+            <input
+              id="staff-pwd"
+              type="password"
+              required
+              placeholder="Enter Staff Password"
+              class="w-full bg-transparent text-sm text-[#0F172A] placeholder-[#94A3B8] focus:outline-none pr-3"
+            />
+            <button
+              type="button"
+              onclick="toggleStaffPwd()"
+              class="text-xs font-bold text-[#0F4C9C] hover:underline shrink-0"
+            >
+              <span id="staff-pwd-label">Show</span>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between text-xs pt-1">
+            <label
+              class="flex items-center gap-2 text-[#334155] font-semibold cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                checked
+                class="w-4 h-4 accent-[#0F4C9C] rounded"
+              />
+              <span>Keep session active</span>
+            </label>
+            <a
+              href="#"
+              onclick="return false;"
+              class="text-[#0F4C9C] font-bold hover:underline"
+            >
+              Reset PIN / Password
+            </a>
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full bg-gradient-to-r from-[#0F4C9C] to-[#1D6CE0] hover:from-[#0B3B7A] hover:to-[#155BB5] text-white font-bold text-sm py-3.5 rounded-full shadow-[0_12px_28px_rgba(15,76,156,0.3)] transition flex items-center justify-center gap-2 mt-2"
+          >
+            <span>Login as Branch Manager</span>
+            <span>→</span>
+          </button>
+        </form>
+
+        <div
+          class="mt-6 pt-5 border-t border-[#F1F5F9] flex items-center justify-between text-xs"
+        >
+          <a href="login.html" class="font-bold text-[#0F4C9C] hover:underline">
+            Customer Login →
+          </a>
+          <a
+            href="index.html"
+            class="font-semibold text-[#64748B] hover:text-[#0F4C9C] transition"
+          >
+            ← Back to Website
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentRole = "Manager";
+
+      function setStaffRole(role) {
+        currentRole = role;
+        const mgrBtn = document.getElementById("btn-manager");
+        const salesBtn = document.getElementById("btn-sales");
+        const heading = document.getElementById("role-heading");
+        const subtext = document.getElementById("role-subtext");
+        const empInput = document.getElementById("emp-id-input");
+        const submitBtn = document.getElementById("submit-btn");
+
+        if (role === "Manager") {
+          mgrBtn.className =
+            "py-2.5 px-3 text-xs font-extrabold rounded-xl bg-[#0F4C9C] text-white shadow-sm transition flex items-center justify-center gap-1.5";
+          salesBtn.className =
+            "py-2.5 px-3 text-xs font-bold rounded-xl text-[#475569] hover:text-[#0F4C9C] transition flex items-center justify-center gap-1.5";
+          heading.textContent = "Manager Sign In";
+          subtext.textContent =
+            "Access team performance, client details, approvals & attendance";
+          empInput.placeholder = "Manager ID (e.g. KGM-101) or Work Email";
+          submitBtn.innerHTML =
+            "<span>Login as Branch Manager</span><span>→</span>";
+        } else {
+          salesBtn.className =
+            "py-2.5 px-3 text-xs font-extrabold rounded-xl bg-[#0F4C9C] text-white shadow-sm transition flex items-center justify-center gap-1.5";
+          mgrBtn.className =
+            "py-2.5 px-3 text-xs font-bold rounded-xl text-[#475569] hover:text-[#0F4C9C] transition flex items-center justify-center gap-1.5";
+          heading.textContent = "Sales Executive Sign In";
+          subtext.textContent =
+            "Access performance, client details, attendance, profile & sales";
+          empInput.placeholder = "Executive ID (e.g. KGS-204) or Work Email";
+          submitBtn.innerHTML =
+            "<span>Login as Sales Executive</span><span>→</span>";
+        }
+      }
+
+      function toggleStaffPwd() {
+        const input = document.getElementById("staff-pwd");
+        const label = document.getElementById("staff-pwd-label");
+        if (input.type === "password") {
+          input.type = "text";
+          label.textContent = "Hide";
+        } else {
+          input.type = "password";
+          label.textContent = "Show";
+        }
+      }
+
+      function handleStaffLogin(e) {
+        e.preventDefault();
+        if (currentRole === "Sales") {
+          window.location.href = "sales-dashboard.html";
+        } else {
+          window.location.href = "manager-dashboard.html";
+        }
+      }
+    </script>
+  </body>
+</html>
